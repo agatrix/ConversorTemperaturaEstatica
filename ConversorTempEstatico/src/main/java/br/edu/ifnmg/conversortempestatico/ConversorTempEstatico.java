@@ -38,4 +38,19 @@ public class ConversorTempEstatico {
     }        
     //</editor-fold>
     
+    //<editor-fold defaultstate="collapsed" desc="Metodos Fahrenheit">
+    public static double fahrenheitParaC(ConversorTempEstatico x) throws Exception {
+        if(x.valor < -459.67)
+            throw new Exception("O valor passado é menor que o Zero Absoluto");
+          
+        return ((x.valor - 32) * 5/9);
+    }
+    
+    public static double fahrenheiParaK(ConversorTempEstatico x) throws Exception{
+        if(x.valor < -459.67)
+            throw new Exception("O valor passado é menor que o Zero Absoluto");
+        
+        return (x.valor-32)*5/9+273.15;
+    }     
+    //</editor-fold>
 }
